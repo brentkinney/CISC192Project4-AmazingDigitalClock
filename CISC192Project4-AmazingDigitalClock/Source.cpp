@@ -6,6 +6,14 @@
 #include <string>
 using namespace std;
 
+bool normalTime(int hourDigit1, int hourDigit2, int minDigit1, int minDigit2)
+{
+	if ((hourDigit1 + hourDigit2) == (minDigit1 + minDigit2))
+		return true;
+	else
+		return false;
+}
+
 int main()
 {
 	char choice = 'y';
@@ -17,6 +25,7 @@ int main()
 		cout << timeGiven << " is a normal time" << endl;
 
 
+		
 		//see if the user wants to continue and continue if desired
 		cout << "Continue? (Y/N): ";
 		cin >> choice;
@@ -24,6 +33,7 @@ int main()
 	}
 	//display author of the program
 	cout << "Programmed by Brent Kinney" << endl;
+
 	cout << "Press [Enter] key to end..."; //prompt lets user know
 	cin.ignore(256, '\n');
 	cin.get();
